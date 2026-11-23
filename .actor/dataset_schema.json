@@ -1,0 +1,36 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Site Audit Overview",
+      "transformation": {
+        "fields": [
+          "domain",
+          "statusCode",
+          "ttfbMs",
+          "securityGrade",
+          "aiReadinessScore",
+          "hasLlmsTxt",
+          "techStack",
+          "emails",
+          "title"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "domain": { "label": "Domain", "format": "text" },
+          "statusCode": { "label": "HTTP", "format": "number" },
+          "ttfbMs": { "label": "TTFB (ms)", "format": "number" },
+          "securityGrade": { "label": "Security", "format": "text" },
+          "aiReadinessScore": { "label": "AI Score", "format": "number" },
+          "hasLlmsTxt": { "label": "llms.txt", "format": "boolean" },
+          "techStack": { "label": "Tech Stack", "format": "array" },
+          "emails": { "label": "Public Emails", "format": "array" },
+          "title": { "label": "Page Title", "format": "text" }
+        }
+      }
+    }
+  }
+}

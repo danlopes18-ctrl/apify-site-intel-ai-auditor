@@ -1,0 +1,14 @@
+{
+  "name": "site-intel-ai-auditor",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Fast, zero-browser Website Tech Stack, Security Headers, Contact & AI-Readiness (llms.txt) Auditor for Apify Store & MCP.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node test/verify_actor.mjs"
+  },
+  "dependencies": {
+    "apify": "^3.2.6"
+  }
+}

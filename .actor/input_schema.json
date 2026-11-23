@@ -1,0 +1,56 @@
+{
+  "title": "Website Tech Stack, Security & AI-Readiness Auditor Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "urls": {
+      "title": "Target Website URLs",
+      "type": "array",
+      "description": "List of domains or full URLs to audit (e.g., https://stripe.com or linear.app).",
+      "editor": "stringList",
+      "prefill": [
+        "https://danlopes18-ctrl.github.io/",
+        "https://github.com"
+      ],
+      "example": [
+        "https://stripe.com",
+        "https://linear.app"
+      ]
+    },
+    "checkAiReadiness": {
+      "title": "Check AI-Readiness (llms.txt & robots.txt)",
+      "type": "boolean",
+      "description": "Probe /llms.txt, /llms-full.txt, and /robots.txt to check GPTBot, ClaudeBot, PerplexityBot, and OAI-SearchBot permissions.",
+      "default": true
+    },
+    "checkSitemap": {
+      "title": "Check sitemap.xml",
+      "type": "boolean",
+      "description": "Check whether /sitemap.xml exists and estimate indexed URL count.",
+      "default": true
+    },
+    "extractContacts": {
+      "title": "Extract Public Emails & Social Links",
+      "type": "boolean",
+      "description": "Extract public business contact emails and social profiles (LinkedIn, X/Twitter, GitHub, YouTube, Instagram) found on the landing page.",
+      "default": true
+    },
+    "maxConcurrency": {
+      "title": "Max Concurrency",
+      "type": "integer",
+      "description": "Number of websites to audit in parallel (1-20).",
+      "default": 5,
+      "minimum": 1,
+      "maximum": 20
+    },
+    "timeoutMs": {
+      "title": "Request Timeout (ms)",
+      "type": "integer",
+      "description": "Per-request HTTP timeout in milliseconds (2000-20000).",
+      "default": 10000,
+      "minimum": 2000,
+      "maximum": 20000
+    }
+  },
+  "required": ["urls"]
+}

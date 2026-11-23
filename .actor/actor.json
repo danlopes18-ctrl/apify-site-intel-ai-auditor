@@ -1,0 +1,16 @@
+{
+  "actorSpecification": 1,
+  "name": "site-intel-ai-auditor",
+  "title": "Website Tech Stack, Security & AI-Readiness (llms.txt) Auditor",
+  "description": "Fast, zero-browser website intelligence & B2B lead enrichment Actor. Detects tech stack, security headers grade (A-F), llms.txt & AI crawler readiness (GPTBot/ClaudeBot), SEO/JSON-LD signals, public emails, and social links. MCP-ready.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "meta": {
+    "templateId": "js-start"
+  },
+  "dockerfile": "../Dockerfile",
+  "input": "./input_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}
