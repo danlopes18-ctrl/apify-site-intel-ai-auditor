@@ -1,0 +1,16 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Website Tech Stack, Security & AI-Readiness Auditor Output",
+  "properties": {
+    "overview": {
+      "type": "string",
+      "title": "Audited Websites Dataset (Overview)",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+    },
+    "items": {
+      "type": "string",
+      "title": "Full JSON Audit Results",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}
